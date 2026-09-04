@@ -85,11 +85,58 @@ with st.expander('Warmlines'):
 
         st.write("For more information, access their website here:")
         st.link_button("211 Idaho Warmline", "https://healthandwelfare.idaho.gov/services-programs/211")
+    elif option == "Connecticut":
+        st.write("The Community Pathways warmline provides resource and referral support to families with children who are impacted by mental health and substance" \
+        "use disorder concerns. Knowing who to call when a youth is struggling with mental health or substance use issues can be frustrating and confusing. If you " \
+        "know of a youth under the age of 18 who is having troubles, call us and we will connect you to the services and community based supports that best meet the " \
+        "family’s needs. We put families in the driver’s seat to create a plan that feels supported, sustainable, and effective. By calling (877)381-4193, then dialing" \
+        "option 1 during regular business hours, you can contact a family peer specialist before ever entering another family into a broken system.")
 
+        st.write("For more information access their website here:")
+        st.link_button("Connecticut Warmline", "https://www.carelonbh.com/ctcfd/en/home/programs-supports/community-pathways")
+    elif option == "Ohio":
+        st.write("In 12 Ohio counties, callers to 211 or a crisis hotline may be referred to the Family Success Network, providing family coaches to assist with connections" \
+        "to community services. This warmline is a voluntary program designed to strengthen and support businesses on their unique needs, rather than forcing a mandated reporter" \
+        "to send an unsubstantiated report to a broken system.")
 
+        st.write("For more information, access their website here:")
+        st.link_button("Family Success Network", "https://octf.ohio.gov/what-we-do/family-success-network/family-success-network")
+    elif option == "Colorado":
+        st.write("A brand new three-county pilot has been implemented to provided a recorded message to hotline callers, describing child maltreatment and " \
+        "directing callers to 211 to help families access services if the caller's concerns do not meet the criteria for maltreatment. By providing this recorded" \
+        "message, it helps mandated reporters understand what is considered substantial to report, avoiding a flooded system for child protective services. This" \
+        "warmline is designed to avoid any extra family stress, educating the mandated reporter of what is considered abuse or neglect.")
+
+        st.write("For more information, access their website here:")
+        st.link_button("Colorado Warmline", "https://foster-america.org/innovative-approach-to-support-families-launches-in-colorado/")
+    elif option == "Minnesota":
+        st.write("CPS helps callers determine if a suspected maltreatment report is warranted. However, mandated reporters have an option to" \
+        "transfer to a consultation line, providing information about community services for families. Hennepin County, MN provides this opportunity" \
+        "for mandated reporters to make a report, without the intervention of child protection staff. To make a child protection report, call (612)348-3552")
+
+        st.write("For more information about Hennepin County's warmline, access their website here:")
+        st.link_button("Hennepin County Warmline", "https://www.hennepincounty.gov/services/assistance/children-families/child-protection?from=childprotection")
+    elif option == "Washington":
+        st.write("The Parent Trust Family Helpline is a place for parents in the state of Washington who need someone to listen" \
+        "to them. This allows for mandated reporters to connect families who need extra resources, rather than adding to an unsubstaniated" \
+        "report to child protective services. If you need to connect directly to a Parent Coach, or know someone who does, contact them at" \
+        "(800)932-4673 Monday through Friday from 9am to 5pm, or email them at familyhelpline@parenttrust.org.")
+
+        st.write("For more information about Washington's Parent Trust program, you can access their website at:")
+        st.link_button("Parent Trust", "https://www.parenttrust.org/for-families/call-fhl/")
+    elif option == "California":
+        st.write("In San Francisco, there is a warmline called Safe & Sound TALK Line, which pairs volunteers with" \
+        "parents for peer support, serving as a front door for service referrals, including intensive case management." \
+        "Rather than reporting directly, mandated reporters can connect parents to these volunteers to provide extra suppport" \
+        "during troubling family periods. You or someone you know can access this helpline 9am to 10pm Monday through Friday" \
+        "and Weekends from 9am to 6pm at (415)441-KIDS (5437)")
+
+        st.write("For more information about San Francisco's warmline, you can access their website here:")
+        st.link_button("Safe & Sound", "https://www.safeandsound.org/for-parents/get-help-now/")
 
     st.write("Can't find your state? Access this database to find resources near your Zip Code")
     st.link_button("FindHelp", "https://www.findhelp.org/")
+
 
     
 
