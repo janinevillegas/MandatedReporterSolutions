@@ -142,3 +142,32 @@ with st.expander('Warmlines'):
 
 with st.expander('Community Pathways'):
     st.header("Community Pathways Across the United States")
+    st.write("A lack of trust in public systems may impede families’ willingness to engage in voluntary prevention services that could benefit their " \
+    "children by promoting safety, stability and well-being. With mandated reporting following unclear regulations and a miseducation among its reporters," \
+    "providing resources to both the reporter and family remains especially necessary. In three U.S states/territories, they follow a new system, a community" \
+    "pathway, to follow a 'Family First' approach.")
+
+    st.write("The Family First Prevention Services Act ('Family First'), enacted in February 2018, created a federal entitlement with the stated purpose of "
+    "reducing entries into foster care by allowing states and Tribes to use federal Title IV-E funds for prevention services that support children to live "
+    "safely with their families. The law provided an unprecedented opportunity to reorient child welfare and advance system transformation in regard to the "
+    "types of services offered, which families receive services, and how and where they access them.")
+
+    st.write("Read more about the three new approaches with a 'Family First' apprach.")
+
+    option = st.selectbox(
+        "Community Pathways By State",
+        ("Select your state", "Connecticut", "Indiana", "Washington DC")
+    )
+
+    if option != "Select your state":
+        st.write("You selected:", option)
+    if option ==  "Connecticut":
+        st.write("In 2023, Connecticut created a central place for families to call or " \
+        "be referred when they need support. This prevention care management entity is " \
+        "empowered to connect families to services without any direct contact with the child " \
+        "protection agency. This model takes a public health approach in which any family can call "
+        "and talk to an engagement specialist about their concerns and get connected to a resource "
+        "or service that meets their individual needs.")
+
+        st.write("Read more abou their community pathway approach here:")
+        st.link_button("Connecticut Community Pathway", "https://portal.ct.gov/-/media/DCF/CTFamilyFirst/pdf/State-of-Connecticut-Family-First-Plan-January-2022_FINAL.pdf")
