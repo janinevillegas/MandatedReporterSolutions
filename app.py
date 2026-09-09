@@ -9,35 +9,35 @@ st.set_page_config(
 
 st.title("Mandated Reporting Solutions")
 
-with st.expander('About'):
-    st.header("Miseducation of Mandated Reporters Across the United States")
-    
-    df = pd.DataFrame(
-        {"state": ["AZ", "AR", "CO", "GA", "ID", "IN", "KS", "KY", "MI", "MS", "NE", "NH",
-                   "NM", "NC", "ND", "OH", "OR", "RI", "SD", "TX", "VA", "WY"]}
-    )
+st.header("The Miseducation of Mandated Reporters Across the United States")
 
-# Arizona, Arkansas, Colorado, Georgia, Idaho, Indiana, Kansas, Kentucky, Michigan, Mississippi, Nebraska, New Hampshire,
-# New Mexico, North Carolina, North Dakota, Ohio, Oregon, Rhode Island, South Dakota, Texas, Virginia, and Wyoming
+df = pd.DataFrame(
+    {"state": ["AZ", "AR", "CO", "GA", "ID", "IN", "KS", "KY", "MI", "MS", "NE", "NH",
+                "NM", "NC", "ND", "OH", "OR", "RI", "SD", "TX", "VA", "WY"]}
+)
 
-    # Create a US choropleth map
-    fig = px.choropleth(
-        df,
-        locations="state",
-        locationmode="USA-states",
-        scope="usa",
-        color_discrete_sequence=["tomato"],
-    )
+# Create a US choropleth map
+fig = px.choropleth(
+    df,
+    locations="state",
+    locationmode="USA-states",
+    scope="usa",
+    color_discrete_sequence=["tomato"],
+)
 
-    # Render in Streamlit
-    st.plotly_chart(fig)
-    st.write("In the United States, there is a lack of laws about training mandated reporters. With these lack of regulations, this " \
-    "map highlights the 22 U.S states and the District of Columbia that do not require specific training for mandated reporters, " \
-    "forcing training resources to be up to the discretion of the job itself, or force the mandated reporter to follow additional information" \
-    "to be sought out on their agency websites. The lack of regulation creates confusion for mandated reporters, forcing children to fall into" \
-    "a system of neglect, trauma, and separation due to the miseducation of mandated reporters. Read on to continue learning about mandated reporter" \
-    "laws in your state, and how to educate yourself if you're ever in a position to report.")
+# Render in Streamlit
+st.plotly_chart(fig)
+st.write("In the United States, there is a lack of laws about training mandated reporters. With these lack of regulations, this " \
+"map highlights the 22 U.S states and the District of Columbia that do not require specific training for mandated reporters, " \
+"forcing training resources to be up to the discretion of the job itself, or force the mandated reporter to follow additional information" \
+"to be sought out on their agency websites. The lack of regulation creates confusion for mandated reporters, forcing children to fall into" \
+"a system of neglect, trauma, and separation due to the miseducation of mandated reporters. Read on to continue learning about mandated reporter" \
+"laws in your state, and how to educate yourself if you're ever in a position to report.")
 
+st.header("Mandated Reporting Solutions")
+st.write("To better understand how to become a better mandated reporter, read below about my solutions to the miseducation of mandated reporting." \
+"Millions of children across the United States are impacted by unnecessary reports, so check out the resources underneath to see new resources you can" \
+"contact if you or anybody you know is at risk.")
 
 with st.expander('Warmlines'):
     st.header("Warmlines Across the United States")
@@ -49,7 +49,7 @@ with st.expander('Warmlines'):
 
     option = st.selectbox(
         "Warmlines By State",
-        ("Select your state", "Washington DC", "New York", "Idaho", "Connecticut", "Ohio", "Colorado", "Minnesota", "Washington", "California")
+        ("Select your state", "California", "Colorado", "Connecticut", "Idaho", "Minnesota", "New York", "Ohio", "Washington", "Washington DC")
     )
 
     if option != "Select your state":
@@ -171,3 +171,23 @@ with st.expander('Community Pathways'):
 
         st.write("Read more abou their community pathway approach here:")
         st.link_button("Connecticut Community Pathway", "https://portal.ct.gov/-/media/DCF/CTFamilyFirst/pdf/State-of-Connecticut-Family-First-Plan-January-2022_FINAL.pdf")
+    elif option == "Indiana":
+        st.write("In Indiana, the Department of Child Services turned to Healthy Families " \
+        "America (HFA) as its initial community pathway provider and HFA-eligible families as the " \
+        "population the state would serve. HFA has broad eligibility criteria with a focus on families " \
+        "with risk of system involvement. The evidence-based model, which includes access to social, " \
+        "economic, and concrete supports, has a service delivery infrastructure across the state and, " \
+        "until recently, was funded largely through federal Temporary Assistance for Needy Families (TANF) " \
+        "dollars. Indiana began claiming Title IV-E dollars through Family First for HFA in 2023. This " \
+        "upstream investment has paid off. Indiana has administered the Healthy Families program statewide "
+        "for over 30 years, and participation in the program has prevented child maltreatment in almost all "
+        "(over 99%) of the families that receive 12 or more home visits, said Hannah Robinson, prevention " \
+        "services manager at the Department of Child Services.")
+    elif option == "Washington DC":
+        st.write("Indiana began by turning to Healthy Families, an evidence-based home visiting program " \
+        "already well-known and serving families across the state. With the bulk of service delivery infrastructure " \
+        "already in place, moving to implementation mainly required the development of new tools and protocols related " \
+        "to eligibility, safety monitoring, and reporting compliance. Indiana leverages Title IV-E funding for administrative " \
+        "costs associated with staff administering the program, as well as for contracts to implement the model, monitor fidelity, " \
+        "give quality assurance and technical assistance, and provide a database for collecting data.")
+
