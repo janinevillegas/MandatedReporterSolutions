@@ -39,6 +39,25 @@ st.write("To better understand how to become a better mandated reporter, read be
 "Millions of children across the United States are impacted by unnecessary reports, so check out the resources underneath to see new resources you can" \
 "contact if you or anybody you know is at risk.")
 
+st.markdown("""<style>
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #192269 !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #192269 !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 with st.expander('Warmlines'):
     st.header("Warmlines Across the United States")
     st.write("A warmline is a supportive, non-crisis helplines designed to assist families without automatically involving child protective services." \
@@ -58,6 +77,7 @@ with st.expander('Warmlines'):
         st.write("211 Warmline began as part of the city's Thriving Families, Safer Children initiative. This new warmline was officially" \
         "launched on February 11, 2026, aiming to create a unified social services network to support residents with centralized access to" \
         "resources and referrals, while shifting away from the traditional child welfare model.")
+
 
         st.write("For more information access their website here:")
         st.link_button("DC 211 Warmline", "https://211warmline.dc.gov/")
@@ -82,6 +102,12 @@ with st.expander('Warmlines'):
         "has been developing a special focus on suppporting kinship caregivers by training two staff members to be experts on kinship care. This lowcost alternative" \
         "provides mandated reporters with an outlet to connect others with local nonprofits, charities, and faith-based organizations who can support them. To be" \
         "connected with this community dial 211 or (800)926-2588 or text 898211 to be connected to a 211 community resource specialist Monday-Friday 8:00am-6:00pm MST.")
+
+        call_button_html = """
+            <a class="button" href="tel:+8009262588"> Call 211 Here</a>
+        """
+
+        st.markdown(call_button_html, unsafe_allow_html=True)
 
         st.write("For more information, access their website here:")
         st.link_button("211 Idaho Warmline", "https://healthandwelfare.idaho.gov/services-programs/211")
@@ -190,4 +216,3 @@ with st.expander('Community Pathways'):
         "to eligibility, safety monitoring, and reporting compliance. Indiana leverages Title IV-E funding for administrative " \
         "costs associated with staff administering the program, as well as for contracts to implement the model, monitor fidelity, " \
         "give quality assurance and technical assistance, and provide a database for collecting data.")
-
