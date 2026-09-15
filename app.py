@@ -8,6 +8,7 @@ st.set_page_config(
 )
 
 st.title("Mandated Reporting Solutions")
+st.image("https://simplelearning.com/images/uploads/announcing-the-launch-of-mandated-reporter-training-by-simple.jpg", use_container_width=True, caption="Image Credits: Simple Learning Systems")
 
 st.header("The Miseducation of Mandated Reporters Across the United States")
 
@@ -26,7 +27,7 @@ fig = px.choropleth(
 )
 
 # Render in Streamlit
-st.plotly_chart(fig)
+st.plotly_chart(fig, width="stretch")
 st.write("In the United States, there is a lack of laws about training mandated reporters. With these lack of regulations, this " \
 "map highlights the 22 U.S states and the District of Columbia that do not require specific training for mandated reporters, " \
 "forcing training resources to be up to the discretion of the job itself, or force the mandated reporter to follow additional information" \
@@ -104,13 +105,14 @@ with st.expander('Warmlines'):
         "connected with this community dial 211 or (800)926-2588 or text 898211 to be connected to a 211 community resource specialist Monday-Friday 8:00am-6:00pm MST.")
 
         call_button_html = """
-            <a class="button" href="tel:+8009262588"> Call 211 Here</a>
+            <a class="button" href="tel:+18009262588"> Call 211 Here</a>
         """
 
         st.markdown(call_button_html, unsafe_allow_html=True)
 
         st.write("For more information, access their website here:")
-        st.link_button("211 Idaho Warmline", "https://healthandwelfare.idaho.gov/services-programs/211")
+        st.markdown("""<a class="button" href="https://healthandwelfare.idaho.gov/services-programs/211">211 Idaho Warmline</a>
+        """, unsafe_allow_html=True)
     elif option == "Connecticut":
         st.write("The Community Pathways warmline provides resource and referral support to families with children who are impacted by mental health and substance" \
         "use disorder concerns. Knowing who to call when a youth is struggling with mental health or substance use issues can be frustrating and confusing. If you " \
@@ -159,9 +161,9 @@ with st.expander('Warmlines'):
 
         st.write("For more information about San Francisco's warmline, you can access their website here:")
         st.link_button("Safe & Sound", "https://www.safeandsound.org/for-parents/get-help-now/")
-
-    st.write("Can't find your state? Access this database to find resources near your Zip Code")
-    st.link_button("FindHelp", "https://www.findhelp.org/")
+    else:
+        st.write("Can't find your state? Access this database to find resources near your Zip Code")
+        st.markdown("""<a class="button" href="https://www.findhelp.org/">FindHelp</a> """, unsafe_allow_html=True)
 
 
     
