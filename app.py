@@ -79,9 +79,15 @@ with st.expander('Warmlines'):
         "launched on February 11, 2026, aiming to create a unified social services network to support residents with centralized access to" \
         "resources and referrals, while shifting away from the traditional child welfare model.")
 
+        call_button_html = """
+            <a class="button" href="tel:+211"> Call 211 Here</a>
+        """
+
+        st.markdown(call_button_html, unsafe_allow_html=True)
 
         st.write("For more information access their website here:")
-        st.link_button("DC 211 Warmline", "https://211warmline.dc.gov/")
+        st.markdown("""<a class="button" href="https://211warmline.dc.gov/">DC 211 Warmline</a>
+        """, unsafe_allow_html=True)
     elif option == "New York":
         st.write("New York City:")
         st.write("The Administration for Children's Services staffs a Support Line for families seeking asistance with issues such as food," \
@@ -119,9 +125,16 @@ with st.expander('Warmlines'):
         "know of a youth under the age of 18 who is having troubles, call us and we will connect you to the services and community based supports that best meet the " \
         "family’s needs. We put families in the driver’s seat to create a plan that feels supported, sustainable, and effective. By calling (877)381-4193, then dialing" \
         "option 1 during regular business hours, you can contact a family peer specialist before ever entering another family into a broken system.")
+        call_button_html = """
+            <a class="button" href="tel:+18773814193">Call Connecticut's Warmline</a>
+        """
+
+        st.markdown(call_button_html, unsafe_allow_html=True)
+        st.write("Then dial option 1 during regular business hours")
 
         st.write("For more information access their website here:")
-        st.link_button("Connecticut Warmline", "https://www.carelonbh.com/ctcfd/en/home/programs-supports/community-pathways")
+        st.markdown("""<a class="button" href="https://www.carelonbh.com/ctcfd/en/home/programs-supports/community-pathways">Connecticut Warmline</a>
+        """, unsafe_allow_html=True)
     elif option == "Ohio":
         st.write("In 12 Ohio counties, callers to 211 or a crisis hotline may be referred to the Family Success Network, providing family coaches to assist with connections" \
         "to community services. This warmline is a voluntary program designed to strengthen and support businesses on their unique needs, rather than forcing a mandated reporter" \
