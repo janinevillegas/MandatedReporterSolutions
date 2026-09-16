@@ -33,7 +33,7 @@ st.write("In the United States, there is a lack of laws about training mandated 
 "forcing training resources to be up to the discretion of the job itself, or force the mandated reporter to follow additional information" \
 "to be sought out on their agency websites. The lack of regulation creates confusion for mandated reporters, forcing children to fall into" \
 "a system of neglect, trauma, and separation due to the miseducation of mandated reporters. Read on to continue learning about mandated reporter" \
-"laws in your state, and how to educate yourself if you're ever in a position to report.")
+" laws in your state, and how to educate yourself if you're ever in a position to report.")
 
 st.header("Mandated Reporting Solutions")
 st.write("To better understand how to become a better mandated reporter, read below about my solutions to the miseducation of mandated reporting." \
@@ -140,31 +140,56 @@ with st.expander('Warmlines'):
         "to community services. This warmline is a voluntary program designed to strengthen and support businesses on their unique needs, rather than forcing a mandated reporter" \
         "to send an unsubstantiated report to a broken system.")
 
+        call_button_html = """
+            <a class="button" href="tel:+211"> Call Ohio's 211 Here</a>
+        """
+        st.markdown(call_button_html, unsafe_allow_html=True)
+
         st.write("For more information, access their website here:")
-        st.link_button("Family Success Network", "https://octf.ohio.gov/what-we-do/family-success-network/family-success-network")
+        st.markdown("""<a class="button" href="https://octf.ohio.gov/what-we-do/family-success-network/family-success-network">Family Success Network</a>
+        """, unsafe_allow_html=True)
     elif option == "Colorado":
         st.write("A brand new three-county pilot has been implemented to provided a recorded message to hotline callers, describing child maltreatment and " \
         "directing callers to 211 to help families access services if the caller's concerns do not meet the criteria for maltreatment. By providing this recorded" \
         "message, it helps mandated reporters understand what is considered substantial to report, avoiding a flooded system for child protective services. This" \
         "warmline is designed to avoid any extra family stress, educating the mandated reporter of what is considered abuse or neglect.")
 
+        call_button_html = """
+            <a class="button" href="tel:+211"> Call Colorado's 211 Here</a>
+        """
+        st.markdown(call_button_html, unsafe_allow_html=True)
         st.write("For more information, access their website here:")
-        st.link_button("Colorado Warmline", "https://foster-america.org/innovative-approach-to-support-families-launches-in-colorado/")
+
+        st.markdown("""<a class="button" href="https://foster-america.org/innovative-approach-to-support-families-launches-in-colorado/">Colorado Warmline</a>
+        """, unsafe_allow_html=True)
     elif option == "Minnesota":
         st.write("CPS helps callers determine if a suspected maltreatment report is warranted. However, mandated reporters have an option to" \
         "transfer to a consultation line, providing information about community services for families. Hennepin County, MN provides this opportunity" \
         "for mandated reporters to make a report, without the intervention of child protection staff. To make a child protection report, call (612)348-3552")
 
+        call_button_html = """
+            <a class="button" href="tel:+16123483552"> Call Minnesota's Warmline Here</a>
+        """
+        st.markdown(call_button_html, unsafe_allow_html=True)
+
         st.write("For more information about Hennepin County's warmline, access their website here:")
-        st.link_button("Hennepin County Warmline", "https://www.hennepincounty.gov/services/assistance/children-families/child-protection?from=childprotection")
+        st.markdown("""<a class="button" href="https://www.hennepincounty.gov/services/assistance/children-families/child-protection?from=childprotection">Hennepin County Warmline</a>
+        """, unsafe_allow_html=True)
+
     elif option == "Washington":
         st.write("The Parent Trust Family Helpline is a place for parents in the state of Washington who need someone to listen" \
         "to them. This allows for mandated reporters to connect families who need extra resources, rather than adding to an unsubstaniated" \
         "report to child protective services. If you need to connect directly to a Parent Coach, or know someone who does, contact them at" \
         "(800)932-4673 Monday through Friday from 9am to 5pm, or email them at familyhelpline@parenttrust.org.")
 
+        call_button_html = """
+            <a class="button" href="tel:+18009324673">Call Parent Trust Family Helpline Here</a>
+        """
+        st.markdown(call_button_html, unsafe_allow_html=True)
+
         st.write("For more information about Washington's Parent Trust program, you can access their website at:")
-        st.link_button("Parent Trust", "https://www.parenttrust.org/for-families/call-fhl/")
+        st.markdown("""<a class="button" href="https://www.parenttrust.org/for-families/call-fhl/">Parent Trust</a>
+        """, unsafe_allow_html=True)
     elif option == "California":
         st.write("In San Francisco, there is a warmline called Safe & Sound TALK Line, which pairs volunteers with" \
         "parents for peer support, serving as a front door for service referrals, including intensive case management." \
@@ -172,8 +197,14 @@ with st.expander('Warmlines'):
         "during troubling family periods. You or someone you know can access this helpline 9am to 10pm Monday through Friday" \
         "and Weekends from 9am to 6pm at (415)441-KIDS (5437)")
 
+        call_button_html = """
+            <a class="button" href="tel:+14154415437">Call Safe & Sound Hotline Here</a>
+        """
+        st.markdown(call_button_html, unsafe_allow_html=True)
+
         st.write("For more information about San Francisco's warmline, you can access their website here:")
-        st.link_button("Safe & Sound", "https://www.safeandsound.org/for-parents/get-help-now/")
+        st.markdown("""<a class="button" href="https://www.safeandsound.org/for-parents/get-help-now/">Safe & Sound Website</a>
+        """, unsafe_allow_html=True)
     else:
         st.write("Can't find your state? Access this database to find resources near your Zip Code")
         st.markdown("""<a class="button" href="https://www.findhelp.org/">FindHelp</a> """, unsafe_allow_html=True)
